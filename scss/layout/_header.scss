@@ -1,0 +1,149 @@
+@use "../abstracts/variables"as *;
+@use "../vendors/bootstrap"as *;
+@use "../../node_modules/sass-rem/rem"as *;
+
+/* Start The Landing Section */
+.header {
+  .landing {
+    &-text {
+      &-title {
+        font-family: "HKGrotesk-Bold", sans-serif;
+
+        font: {
+          size: 2rem;
+        }
+
+        letter: {
+          spacing: 0.2px;
+        }
+
+        @include media-breakpoint-up(md) {
+          font: {
+            size: 3rem;
+          }
+        }
+
+        @include media-breakpoint-up(lg) {
+          font: {
+            size: 3.5rem;
+          }
+
+          line: {
+            height: div(rem(68px), 3.5rem) !important;
+          }
+        }
+      }
+
+      &-description {
+        line: {
+          height: div(rem(28px), 1rem);
+        }
+
+        @include media-breakpoint-up(md) {
+          font: {
+            size: 1.25rem;
+          }
+
+          line: {
+            height: div(rem(36px), 1.25rem);
+          }
+        }
+      }
+
+      .icons {
+        >div:not(:last-child) {
+          margin: {
+            bottom: rem(15px);
+          }
+        }
+
+        &-image {
+          img {
+            @include media-breakpoint-up(md) {
+              width: 2rem;
+              height: 2rem;
+            }
+
+            @include media-breakpoint-up(lg) {
+              border: 1px dashed $secondary;
+            }
+          }
+        }
+
+        &-title,
+        &-description {
+          font: {
+            size: rem(14px);
+          }
+
+          line: {
+            height: div(1.25rem, rem(14px));
+          }
+
+          @include media-breakpoint-up(md) {
+            font: {
+              size: $font-size-base;
+            }
+
+            line: {
+              height: div(rem(22px), 1rem);
+            }
+          }
+        }
+
+        &-title {
+          margin: {
+            bottom: rem(5px);
+          }
+        }
+      }
+    }
+
+    &-image {
+      @include media-breakpoint-up(lg) {
+        direction: rtl;
+      }
+
+      img {
+        margin: {
+          left: -0.75rem;
+        }
+
+        @include media-breakpoint-up(md) {
+          max-width: none;
+          height: 530px;
+
+          border: {
+            radius: $border-radius-4 0 0 $border-radius-4;
+          }
+        }
+
+        @include media-breakpoint-up(lg) {
+          height: auto;
+
+          border: {
+            radius: 0 $border-radius-4 $border-radius-4 0;
+          }
+
+          margin: {
+            left: calc(calc(calc(100vw - 960px) / 2) * -1);
+          }
+        }
+
+        @include media-breakpoint-up(xl) {
+          margin: {
+            left: calc(calc(calc(100vw - 1140px) / 2) * -1);
+          }
+        }
+
+        @include media-breakpoint-up(xxl) {
+          margin: {
+            left: calc(calc(calc(100vw - 1320px) / 2) * -1);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* End The Landing Section */

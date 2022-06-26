@@ -1,0 +1,206 @@
+@use "../vendors/bootstrap"as *;
+@use "../../node_modules/sass-rem/rem"as *;
+@use "sass:math"as *;
+
+/* Start The Navigation Section */
+.header {
+  .navbar {
+    padding: {
+      top: 1.25rem;
+      bottom: 1.25rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding: {
+        top: rem(26px);
+        bottom: rem(26px);
+      }
+    }
+
+    .offcanvas {
+      position: absolute;
+      bottom: initial;
+      @extend .shadow;
+
+      @include media-breakpoint-up(lg) {
+        position: static;
+
+        box: {
+          shadow: none !important;
+        }
+      }
+
+      &-top {
+        height: auto;
+
+        max: {
+          height: none;
+        }
+      }
+
+      &-backdrop {
+        display: none;
+      }
+    }
+
+    &-nav {
+      @include media-breakpoint-up(lg) {
+        gap: 0 2.5rem;
+      }
+
+      .nav-link {
+        line: {
+          height: div(rem(28px), 1rem);
+        }
+
+        span {
+          font: {
+            family: "HKGrotesk-SemiBold", sans-serif;
+          }
+        }
+
+        svg {
+          width: 1rem;
+          height: 1rem;
+
+          @include media-breakpoint-up(lg) {
+            margin: {
+              left: 1.5rem;
+            }
+          }
+        }
+      }
+
+      .dropdown {
+
+        &.drop-down-menu,
+        &.mega-menu {
+          font: {
+            family: "HKGrotesk-Regular", sans-serif;
+          }
+
+          .nav-link {
+            @include media-breakpoint-up(lg) {
+              padding: {
+                left: 1rem;
+                right: 1rem;
+              }
+            }
+          }
+
+          .dropdown-menu {
+            @extend .shadow;
+
+            @include media-breakpoint-down(lg) {
+              box: {
+                shadow: none !important;
+              }
+            }
+          }
+        }
+
+        &.mega-menu {
+          @include media-breakpoint-up(lg) {
+            position: static;
+          }
+
+          .title {
+            font: {
+              size: $font-size-base;
+              family: "HKGrotesk-Bold", sans-serif;
+            }
+
+            line: {
+              height: div(1.5rem, 1rem);
+            }
+
+            letter: {
+              spacing: 0.2px;
+            }
+          }
+
+          .dropdown-menu {
+            .nav-link {
+              &:hover {
+                text: {
+                  decoration: underline;
+                }
+              }
+            }
+
+            @include media-breakpoint-up(lg) {
+              width: 100vw;
+            }
+          }
+        }
+
+        &.drop-down-menu {
+          >.dropdown-menu {
+            @include media-breakpoint-up(lg) {
+              top: calc(100% + rem(26px));
+              width: 14rem;
+            }
+          }
+
+          .dropend {
+            .dropdown-menu[data-bs-popper] {
+              top: 50%;
+              width: 14rem;
+            }
+
+            >.nav-link[aria-expanded="true"] {
+              color: $primary !important;
+
+              font: {
+                weight: 600;
+                family: "HKGrotesk-SemiBold", sans-serif;
+              }
+            }
+          }
+        }
+
+        &.drop-down-menu {
+          >* {
+            .dropdown-menu {
+              .nav-link {
+                &:hover {
+                  text: {
+                    decoration: underline;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        ul {
+          padding: {
+            left: 2rem;
+          }
+
+          @include media-breakpoint-up(lg) {
+            padding: 0 !important;
+          }
+        }
+
+        &-toggle {
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .form {
+      .btn {
+        @include media-breakpoint-up(lg) {
+          margin: {
+            left: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* End The Navigation Section */

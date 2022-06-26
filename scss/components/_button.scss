@@ -1,0 +1,39 @@
+@use "../abstracts/variables"as *;
+@use "../vendors/bootstrap"as *;
+@use "../../node_modules/sass-rem/rem"as *;
+
+/* Start The Coùpenenet Button */
+.btn {
+  border: {
+    radius: 0.5rem;
+  }
+
+  padding: rem(0.5rem 1.5rem);
+
+  @include media-breakpoint-up(md) {
+    padding: rem(0.75rem 1.75rem);
+
+    font: {
+      size: rem(18px);
+    }
+  }
+}
+
+/* End The Compenent Button */
+/* Start  Check Button */
+.check {
+  background: {
+    color: rgba($buddha-green, 0.15);
+  }
+
+  &:before {
+    content: "";
+    width: rem(6px);
+    height: rem(10px);
+    border: solid $buddha-green;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+}
+
+/* End Check Button */

@@ -1,0 +1,87 @@
+@use "../vendors/bootstrap"as *;
+@use "../../node_modules/sass-rem/rem"as *;
+@use "sass:math"as *;
+
+/* Start The Head Section Compenent */
+.head-section {
+  &-title {
+    font: {
+      size: rem(14px);
+    }
+
+    line: {
+      height: div(rem(19px), rem(14px));
+    }
+
+    letter: {
+      spacing: rem(2px);
+    }
+
+  }
+
+  &-subtitle {
+    font: {
+      family: "HKGrotesk-Bold", sans-serif;
+      size: 1.75rem;
+    }
+
+    line: {
+      height: div(2.25rem, 1.75rem);
+    }
+
+    letter: {
+      spacing: 0.2px;
+    }
+
+    @include media-breakpoint-up(md) {
+      font: {
+        size: 2rem;
+      }
+
+      line: {
+        height: div(2.5rem, 2rem);
+      }
+    }
+
+    @include media-breakpoint-between(md, lg) {
+      margin: {
+        top: 1.25rem !important;
+        bottom: 1.25rem !important;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      font: {
+        size: 2.25rem;
+      }
+
+      line: {
+        height: div(2.5rem, 2.25rem);
+      }
+    }
+
+    // commun things
+
+
+  }
+
+  &-description {
+    line: {
+      height: div(1.75rem, 1rem);
+    }
+
+    @include media-breakpoint-up(md) {
+      font: {
+        size: rem(18px);
+      }
+
+      line: {
+        height: div(2rem, 1.125rem);
+      }
+    }
+  }
+}
+
+
+
+/* End The Head Section Compenent */

@@ -1,0 +1,25 @@
+@use "../abstracts/variables"as *;
+
+/* Mixin  For Generate Background  Colors */
+@mixin generator-background-color {
+
+  @each $color-name,
+  $color-value in $map-background-colors {
+    .bg-#{$color-name} {
+      background: {
+        color: $color-value !important;
+      }
+    }
+  }
+}
+
+/* Mixin For Generate Text Colors */
+@mixin generator-text-color {
+
+  @each $color-name,
+  $color-value in $map-text-colors {
+    .text-#{$color-name} {
+      color: $color-value !important;
+    }
+  }
+}

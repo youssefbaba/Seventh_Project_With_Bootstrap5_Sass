@@ -1,0 +1,23 @@
+/* Decalartion Variables Colors */
+$bright-navy-blue :#1576D8;
+$ensign-blue :#3A4C66;
+$buddha-green :#36B37E;
+$whisper-blue :#e5eaf4;
+
+
+
+/* Declaration Font Weight */
+$font-weight-semibold : 600;
+
+
+/* Create Map For Background Colors */
+$map-background-colors:(bright-navy-blue :$bright-navy-blue);
+
+
+/* Create Map For Text Colors */
+$map-text-colors:(ensign-blue : $ensign-blue,
+  buddha-green :$buddha-green,
+);
+
+/* Border Radius  */
+$border-radius-4 : 1rem;

@@ -6,85 +6,670 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Seventh_project_with_bootstrap5_sass</title>
+  <!-- Google Font Open Sans  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <!-- Main Stylesheet Css -->
   <link rel="stylesheet" href="css/home.css">
   <!-- Font Awesome Css -->
   <link rel="stylesheet" href="css/all.min.css">
 </head>
 
-<body>
-  <!-- Just For Test Set Up Of Project  -->
-  <div class="container">
-    <div class="accordion" id="accordionExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-            aria-expanded="true" aria-controls="collapseOne">
-            Accordion Item #1
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-          data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin
-            adds the appropriate classes that we use to style each element. These classes control the overall
-            appearance,
-            as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or
-            overriding our default variables. It's also worth noting that just about any HTML can go within the
-            <code>.accordion-body</code>, though the transition does limit overflow.
+<body class="bg-white">
+  <!-- Start The Header Section  -->
+  <header class="header">
+    <!-- Start The Navigation Section  -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand p-0" href="#">
+          <img src="media/imgs/header/navigation/logo.png" alt="logo">
+        </a>
+        <button class="navbar-toggler shadow-none p-0" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasOne" aria-controls="offcanvasOne">
+          <img src="media/imgs/header/navigation/menu.svg" alt="menu">
+        </button>
+        <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasOne" aria-labelledby="offcanvasLabelOne">
+          <div class="offcanvas-header text-dark text-capitalize">
+            <h5 class="offcanvas-title" id="offcanvasLabelOne">menu</h5>
+            <button type="button" class="btn-close shadow-none text-dark" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav text-capitalize align-items-lg-center fw-smb ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="#">home</a>
+              </li>
+              <!-- Start Mega Menu  -->
+              <li class="nav-item dropdown mega-menu">
+                <a class="nav-link dropdown-toggle text-dark d-flex justify-content-between align-items-center"
+                  role="button" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuOne"
+                  data-bs-auto-close="outside">
+                  <span>landing</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </a>
+                <div class="dropdown-menu fw-normal border-0 py-0 my-0" aria-labelledby="dropdownMenuOne">
+                  <div class="container-lg px-0">
+                    <div class="row g-0">
+                      <ul class="col-lg-4 list-unstyled mb-0">
+                        <li>
+                          <h5 class="title fw-bold text-primary mb-0 py-2">services</h5>
+                        </li>
+                        <li>
+                          <a href="#" class="nav-link text-dark d-inline-block px-0">software library</a>
+                        </li>
+                        <li>
+                          <a href="#" class="nav-link text-dark d-inline-block px-0">insurance</a>
+                        </li>
+                        <li>
+                          <a href="#" class="nav-link text-dark d-inline-block px-0">conference</a>
+                        </li>
+                        <li>
+                          <a href="#" class="nav-link text-dark d-inline-block px-0">healthcare</a>
+                        </li>
+                      </ul>
+                      <ul class="col-lg-4 list-unstyled mb-0">
+                        <li>
+                          <h5 class="title fw-bold text-primary mb-0 py-2">products</h5>
+                        </li>
+                        <li>
+                          <a href="#" class="nav-link text-dark d-inline-block px-0">cosmetics</a>
+                        </li>
+                        <li>
+                          <a href="#" class="nav-link text-dark d-inline-block px-0">real estate</a>
+                        </li>
+                        <li>
+                          <a href="#" class="nav-link text-dark d-inline-block px-0">rental</a>
+                        </li>
+                        <li>
+                          <a href="#" class="nav-link text-dark d-inline-block px-0">bookstore</a>
+                        </li>
+                      </ul>
+                      <ul class="col-lg-4 list-unstyled mb-0">
+                        <li>
+                          <h5 class="title fw-bold text-primary mb-0 py-2 ">others</h5>
+                        </li>
+                        <li>
+                          <a href="#" class="nav-link text-dark d-inline-block px-0">travel</a>
+                        </li>
+                        <li>
+                          <a href="#" class="nav-link text-dark d-inline-block px-0">agency</a>
+                        </li>
+                        <li>
+                          <a href="#" class="nav-link text-dark d-inline-block px-0">find job</a>
+                        </li>
+                        <li>
+                          <a href="#" class="nav-link text-dark d-inline-block px-0">personal-site</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- End Mega Menu -->
+              <!-- Start Drop Down -->
+              <li class="nav-item dropdown drop-down-menu">
+                <a class="nav-link dropdown-toggle text-dark d-flex justify-content-between align-items-center"
+                  role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside"
+                  id="dropdownMenuTwo">
+                  <span>pages</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu fw-normal border-0 py-0 my-0" aria-labelledby="dropdownMenuTwo">
+                  <li class="dropend">
+                    <!-- Start Here  -->
+                    <a class="nav-link dropdown-toggle text-dark d-flex justify-content-between align-items-center"
+                      role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside"
+                      id="dropdownMenuThree">
+                      company
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <!-- End Here  -->
+                    <ul class="dropdown-menu border-0 py-0 my-0" aria-labelledby="dropdownMenuThree">
+                      <li class="dropdown-item p-0 bg-transparent"><a href="#"
+                          class="nav-link text-dark d-inline-block">about page</a>
+                      </li>
+                      <li class="dropdown-item p-0 bg-transparent"><a href="#"
+                          class="nav-link text-dark d-inline-block">FAQ page</a>
+                      </li>
+                      <li class="dropdown-item p-0 bg-transparent"><a href="#"
+                          class="nav-link text-dark d-inline-block">contact
+                          page</a></li>
+                      <li class="dropdown-item p-0 bg-transparent"><a href="#"
+                          class="nav-link text-dark d-inline-block">pricing
+                          page</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropend">
+                    <!-- Start Here  -->
+                    <a class="nav-link dropdown-toggle text-dark d-flex justify-content-between align-items-center"
+                      role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside"
+                      id="dropdownMenuFour">
+                      career
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <!-- End Here  -->
+                    <ul class="dropdown-menu border-0 py-0 my-0" aria-labelledby="dropdownMenuFour">
+                      <li class="dropdown-item p-0 bg-transparent"><a href="#"
+                          class="nav-link text-dark d-inline-block">career</a>
+                      </li>
+                      <li class="dropdown-item p-0 bg-transparent"><a href="#"
+                          class="nav-link text-dark d-inline-block">career
+                          detail</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropend">
+                    <!-- Start Here  -->
+                    <a class="nav-link dropdown-toggle text-dark d-flex justify-content-between align-items-center"
+                      role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside"
+                      id="dropdownMenuFive">
+                      blog
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <!--  End Here  -->
+                    <ul class="dropdown-menu border-0 py-0 my-0" aria-labelledby="dropdownMenuFive">
+                      <li class="dropdown-item p-0 bg-transparent"><a href="#"
+                          class="nav-link text-dark d-inline-block">blog 1</a>
+                      </li>
+                      <li class="dropdown-item p-0 bg-transparent"><a href="#"
+                          class="nav-link text-dark d-inline-block">blog 2</a>
+                      </li>
+                      <li class="dropdown-item p-0 bg-transparent"><a href="#"
+                          class="nav-link text-dark d-inline-block">article
+                          detail</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropend">
+                    <!-- Start Here  -->
+                    <a class="nav-link dropdown-toggle text-dark d-flex justify-content-between align-items-center"
+                      role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside"
+                      id="dropdownMenuSix">
+                      password reset
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <!--  End Here  -->
+                    <ul class="dropdown-menu border-0 py-0 my-0" aria-labelledby="dropdownMenuSix">
+                      <li class="dropdown-item p-0 bg-transparent">
+                        <a href="#" class="nav-link text-dark d-inline-block">basic</a>
+                      </li>
+                      <li class="dropdown-item p-0 bg-transparent">
+                        <a href="#" class="nav-link text-dark d-inline-block">illustration</a>
+                      </li>
+                      <li class="dropdown-item p-0 bg-transparent">
+                        <a href="#" class="nav-link text-dark d-inline-block">
+                          lorum
+                        </a>
+                      </li>
+                      <li class="dropdown-item p-0 bg-transparent">
+                        <a href="#" class="nav-link text-dark d-inline-block">
+                          lorum
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropend">
+                    <!-- Start Here  -->
+                    <a class="nav-link dropdown-toggle text-dark d-flex justify-content-between align-items-center"
+                      role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside"
+                      id="dropdownMenuSix">
+                      sign in
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <!--  End Here  -->
+                    <ul class="dropdown-menu border-0 py-0 my-0" aria-labelledby="dropdownMenuSix">
+                      <li class="dropdown-item p-0 bg-transparent">
+                        <a href="#" class="nav-link text-dark d-inline-block">basic</a>
+                      </li>
+                      <li class="dropdown-item p-0 bg-transparent">
+                        <a href="#" class="nav-link text-dark d-inline-block">left cover</a>
+                      </li>
+                      <li class="dropdown-item p-0 bg-transparent">
+                        <a href="#" class="nav-link text-dark d-inline-block">
+                          right cover
+                        </a>
+                      </li>
+                      <li class="dropdown-item p-0 bg-transparent">
+                        <a href="#" class="nav-link text-dark d-inline-block">
+                          modal
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!-- End Drop Down -->
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="#">docs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="#">help</a>
+              </li>
+            </ul>
+            <form class="form d-flex">
+              <button class="btn btn-outline-primary fw-bold border-2" type="submit">get it now</button>
+            </form>
           </div>
         </div>
       </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            Accordion Item #2
-          </button>
-        </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-          data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
-            plugin
-            adds the appropriate classes that we use to style each element. These classes control the overall
-            appearance,
-            as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or
-            overriding our default variables. It's also worth noting that just about any HTML can go within the
-            <code>.accordion-body</code>, though the transition does limit overflow.
+    </nav>
+    <!-- End The Navigation Section  -->
+    <!-- Start The Landing Section -->
+    <section class="landing pt-250 pt-md-5 pt-lg-0 overflow-hidden">
+      <div class="container">
+        <div class="row align-items-md-center">
+          <div class="landing-text col-12 col-md-7 col-lg-6 offset-lg-1 mb-5 mb-md-0">
+            <h1 class="landing-text-title text-dark fw-bold lh-sm mb-0">Make your new life happier.</h1>
+            <p class="landing-text-description text-secondary mt-200 mb-4 mb-md-225 mt-md-5 mt-lg-4 mb-lg-200">
+              We work with several leading insurance companies to secure insurance coverages tailored to meet your
+              needs.
+            </p>
+            <div class="icons row g-0">
+              <div class="col-12 col-lg-6 d-flex mb-md-4 mb-lg-200">
+                <div class="icons-image me-75 me-md-3">
+                  <img src="media/imgs/header/landing/sack-dollar.svg" alt="sack-dollar" title="sack-dollar">
+                </div>
+                <div>
+                  <h4 class="icons-title text-dark fw-bold mb-md-2">Special expat rates </h4>
+                  <p class="icons-description text-secondary mb-0">Excellent coverage</p>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6 d-flex mb-md-4 mb-lg-200">
+                <div class="icons-image me-75 me-md-3">
+                  <img src="media/imgs/header/landing/bag.svg" alt="bag" title="bag">
+                </div>
+                <div>
+                  <h4 class="icons-title text-dark fw-bold mb-md-2">Work life balance</h4>
+                  <p class="icons-description text-secondary mb-0">Make your life easier</p>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6 d-flex mb-md-4 mb-lg-0">
+                <div class="icons-image me-75 me-md-3">
+                  <img src="media/imgs/header/landing/support.svg" alt="support" title="support">
+                </div>
+                <div>
+                  <h4 class="icons-title text-dark fw-bold mb-md-2">24/7 English Support</h4>
+                  <p class="icons-description text-secondary mb-0">Call us anytime</p>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6 d-flex mb-md-4 mb-lg-">
+                <div class="icons-image me-75 me-md-3">
+                  <img src="media/imgs/header/landing/files.svg" alt="files" title="files">
+                </div>
+                <div>
+                  <h4 class="icons-title text-dark fw-bold mb-md-2">No paperwork</h4>
+                  <p class="icons-description text-secondary mb-0">Just sign up & use app</p>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="btn btn-primary fw-bold border-2 rounded-pill mt-200 mt-lg-3" type="button">Get a
+              consultation</a>
+          </div>
+          <div class="landing-image col-12 col-md-5 col-lg-5 order-lg-first">
+            <img src="media/imgs/header/landing/landing.svg" alt="landing" title="landing" class="img-fluid">
           </div>
         </div>
       </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingThree">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            Accordion Item #3
-          </button>
-        </h2>
-        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-          data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin
-            adds the appropriate classes that we use to style each element. These classes control the overall
-            appearance,
-            as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or
-            overriding our default variables. It's also worth noting that just about any HTML can go within the
-            <code>.accordion-body</code>, though the transition does limit overflow.
+    </section>
+    <!-- End The Landing Section -->
+  </header>
+  <!-- End The Header Section  -->
+  <!-- Start The Services Section -->
+  <section class="services pb-5">
+    <div class="container">
+      <div class="head-section text-center col-lg-8 offset-lg-2">
+        <h2 class="head-section-title fw-smb text-uppercase text-buddha-green mb-0">your services</h2>
+        <h3 class="head-section-subtitle fw-bold text-dark my-3">Insurance made simple for you</h3>
+        <p class="head-section-description text-secondary mb-4 mb-md-225">
+          We work with several leading insurance companies to secure insurance
+          coverages tailored to meet your needs.
+        </p>
+      </div>
+      <ul
+        class="list list-unstyled d-flex flex-column align-items-md-center flex-lg-row justify-content-lg-around align-items-lg-stretch mb-0">
+        <li class="d-flex gap-75  mb-3 mb-md-125 mb-lg-0">
+          <span class="check rounded-circle position-relative center-flex"></span>
+          <p class="text-dark mb-0">Flexible products to make your life easier</p>
+        </li>
+        <li class="d-flex gap-75 mb-3 mb-md-125 mb-lg-0">
+          <span class="check rounded-circle position-relative center-flex"></span>
+          <p class="text-dark mb-0">Highest standards of service</p>
+        </li>
+        <li class="d-flex gap-75">
+          <span class="check rounded-circle position-relative center-flex"></span>
+          <p class="text-dark mb-0">Fast and reliable service</p>
+        </li>
+      </ul>
+      <div class="services-content mt-250 mt-md-5 row">
+        <div class="services-content-item col-lg-4 mb-4 mb-lg-0">
+          <div class="card rounded-4 shadow-card">
+            <div
+              class="card-body d-flex flex-column flex-md-row flex-lg-column pt-250 pb-200 px-200 pt-md-5 pb-md-250 ps-md-250 pe-lg-250 pb-lg-5">
+              <div class="icon rounded-4 border position-relative">
+                <img src="media/imgs/services/home.svg" alt="home" title="home" class="center-position-absolute">
+              </div>
+              <div>
+                <h5 class="title text-dark fw-bold mb-0">Home insurance</h5>
+                <p class="info text-secondary mb-4 mt-lg-2 mb-lg-200">
+                  Home insurance is a type of insurance policy that
+                  provides cover for your home.
+                </p>
+                <a href="#" class="link text-decoration-none fw-bold text-primary d-flex align-items-center">
+                  <span class="d-inline-block me-1">Learn more</span>
+                  <i class="fa-solid fa-arrow-right position-relative"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="services-content-item col-lg-4 mb-4 mb-lg-0">
+          <div class="card rounded-4 shadow-card">
+            <div
+              class="card-body d-flex flex-column flex-md-row flex-lg-column pt-250 pb-200 px-200 pt-md-5 pb-md-250 ps-md-250 pe-lg-250 pb-lg-5">
+              <div class="icon rounded-4 border position-relative">
+                <img src="media/imgs/services/blood-donation.svg" alt="blood-donation" title="blood-donation"
+                  class="center-position-absolute">
+              </div>
+              <div>
+                <h5 class="title text-dark fw-bold mb-0">Life insurance</h5>
+                <p class="info text-secondary mb-4 mt-lg-2 mb-lg-200">
+                  Helping you bridge gaps in your health care coverage during times of transition.
+                </p>
+                <a href="#" class="link text-decoration-none fw-bold text-primary d-flex align-items-center">
+                  <span class="d-inline-block me-1">Learn more</span>
+                  <i class="fa-solid fa-arrow-right position-relative"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="services-content-item col-lg-4">
+          <div class="card rounded-4 shadow-card">
+            <div
+              class="card-body d-flex flex-column flex-md-row flex-lg-column pt-250 pb-200 px-200 pt-md-5 pb-md-250 ps-md-250 pe-lg-250 pb-lg-5">
+              <div class="icon rounded-4 border position-relative">
+                <img src="media/imgs/services/car.svg" alt="car" title="car" class="center-position-absolute">
+              </div>
+              <div>
+                <h5 class="title text-dark fw-bold mb-0">Car insurance</h5>
+                <p class="info text-secondary mb-4 mt-lg-2 mb-lg-200">
+                  Car insurance is a type of insurance policy that provides cover for your car.
+                </p>
+                <a href="#" class="link text-decoration-none fw-bold text-primary d-flex align-items-center">
+                  <span class="d-inline-block me-1">Learn more</span>
+                  <i class="fa-solid fa-arrow-right position-relative"></i>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <i class="fa-brands fa-facebook-f fa-2x text-primary"></i>
+  </section>
+  <!-- End The Services Section -->
+  <!-- Start The Quote Section -->
+  <section class="quote overflow-hidden pt-4 pt-md-5 position-relative">
+    <div class="container position-relative">
+      <div class="row g-0">
+        <div class="card col-md-10 offset-md-1 offset-lg-0 col-lg-7 col-xl-6 rounded-4 shadow-card">
+          <div class="card-body pt-250 px-4 pb-200 text-dark">
+            <img src="media/imgs/quote/quote-left.svg" alt="quote-left" title="quote-left" class="quote-left">
+            <blockquote class="quote-text mb-4 mt-md-4">
+              This platform is one of the best companies I have dealt with in Indonesia. They’re always happy to help,
+              and i wouldn’t hesitate to recommend them.
+            </blockquote>
+            <div class="d-flex flex-column flex-md-row gap-2 gap-md-3">
+              <h6 class="name-customer fw-smb mb-0">Daniel Anderson</h6>
+              <div class="type-customer text-secondary d-flex align-items-center">
+                <span class="check rounded-circle position-relative center-flex me-2"></span>
+                <span>Verified customer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="curve d-lg-none position-absolute bottom-0 start-0 w-100 overflow-hidden">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"
+        class="position-relative d-block">
+        <path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z"
+          class="shape-fill"></path>
+      </svg>
+    </div>
+    <div class="wave d-none d-lg-block position-absolute start-0 w-100 overflow-hidden">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"
+        class="position-relative d-block">
+        <path
+          d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+          class="shape-fill"></path>
+      </svg>
+    </div>
+  </section>
+  <!-- End The Quote Section -->
+  <!-- Start The Benefits Section  -->
+  <section class="benefits">
+    <div class="container">
+      <div class="row">
+        <div class="head-section text-center text-lg-start col-lg-4 mb-250 mb-lg-0">
+          <h2 class="head-section-title fw-smb text-uppercase text-buddha-green mb-0">your benefits</h2>
+          <h3 class="head-section-subtitle fw-bold text-dark my-3">You’re in good hoisting platform</h3>
+          <p class="head-section-description text-secondary d-md-none mb-0">
+            Tired of secretive bids? Our platform provides a transparent rental auction with the ability to submit
+            custom
+            offers.
+          </p>
+        </div>
+        <div class="benefits-item col-md-6 col-lg-4 mb-250 mb-md-5 d-flex align-items-stretch">
+          <div class="card border-0">
+            <div class="card-body p-0 text-center text-md-start">
+              <div class="icon rounded-4 border position-relative mx-auto mx-md-0">
+                <img src="media/imgs/benefits/get-money.svg" alt="get-money" title="get-money"
+                  class="center-position-absolute">
+              </div>
+              <h5 class="title fw-smb mt-4 mb-2">We have the best prices</h5>
+              <p class="info text-secondary mb-0">
+                Our insurance plans offers are priced the same everywhere else. We just make them easier for you to
+                find.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="benefits-item col-md-6 col-lg-4 mb-250 mb-md-5 d-flex align-items-stretch">
+          <div class="card border-0">
+            <div class="card-body p-0 text-center text-md-start">
+              <div class="icon rounded-4 border position-relative mx-auto mx-md-0">
+                <img src="media/imgs/benefits/protection.svg" alt="protection" title="protection"
+                  class="center-position-absolute">
+              </div>
+              <h5 class="title fw-smb mt-4 mb-2">We’re your insurance advocate</h5>
+              <p class="info text-secondary mb-0">
+                We will deal with the insurance companies for you, even after you’ve bought your plan.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="benefits-item col-md-6 col-lg-4 mb-250 mb-md-5 mb-lg-0 d-flex align-items-stretch">
+          <div class="card border-0">
+            <div class="card-body p-0 text-center text-md-start">
+              <div class="icon rounded-4 border position-relative mx-auto mx-md-0">
+                <img src="media/imgs/benefits/neutron.svg" alt="neutron" title="neutron"
+                  class="center-position-absolute">
+              </div>
+              <h5 class="title fw-smb mt-4 mb-2">We’re unbiased</h5>
+              <p class="info text-secondary mb-0">
+                Our online tools help you decide what product is best for you. We’re here to insurance plan you choose.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="benefits-item col-md-6 col-lg-4 mb-250 mb-md-5 mb-lg-0 d-flex align-items-stretch">
+          <div class="card border-0">
+            <div class="card-body p-0 text-center text-md-start">
+              <div class="icon rounded-4 border position-relative mx-auto mx-md-0">
+                <img src="media/imgs/benefits/support.svg" alt="support" title="support"
+                  class="center-position-absolute">
+              </div>
+              <h5 class="title fw-smb mt-4 mb-2">We’re available 24/7</h5>
+              <p class="info text-secondary mb-0">
+                We have your back 24/7 between our online chat function, email and telephone support.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="benefits-item col-md-6 col-lg-4 d-flex align-items-stretch">
+          <div class="card border-0">
+            <div class="card-body p-0 text-center text-md-start">
+              <div class="icon rounded-4 border position-relative mx-auto mx-md-0">
+                <img src="media/imgs/benefits/like.svg" alt="like" title="like" class="center-position-absolute">
+              </div>
+              <h5 class="title fw-smb mt-4 mb-2">We make insurance simple</h5>
+              <p class="info text-secondary mb-0">
+                We’re committed to making applying for insurance as simple as can be for our customers.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="line"></div>
+      </div>
+    </div>
+  </section>
+  <!-- End The Benefits Section  -->
+  <!-- Start The Tips Section -->
+  <section class="tips">
+    <div class="container">
+      <div class="head-section text-center col-lg-8 offset-lg-2 mb-250">
+        <h2 class="head-section-title fw-smb text-uppercase text-buddha-green mb-0">our tips for you</h2>
+        <h3 class="head-section-subtitle fw-bold text-dark my-3">Reinventing your protection</h3>
+        <p class="head-section-description text-secondary d-md-none mb-0">
+          We share common trends, strategies ideas, opinions, short & long stories from the team behind company.
+        </p>
+      </div>
+      <div class="row g-0">
+        <div class="card col-md-6 border-0 rounded-4 position-relative mb-4 mb-md-0">
+          <img src="media/imgs/tips/tip_01.png" class="card-img-top rounded-4" alt="tip-one" title="tip-one">
+          <p class="card-text text-white fw-bold position-absolute">How to prevent and protect your family from Carbon
+            monoxide
+          </p>
+        </div>
+        <div class="card col-md-6 border-0 rounded-4 position-relative">
+          <img src="media/imgs/tips/tip_02.png" class="card-img-top rounded-4" alt="tip-two" title="tip-two">
+          <p class="card-text text-white fw-bold position-absolute">Motherhood is the hardest and the best job ever
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!-- End The Tips Section -->
+
+  <div class="test" style="border: 1px solid red;">
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Dolores maiores corporis ut labore.</p>
+    <p>Alias mollitia modi vitae odit.</p>
+    <p>Autem adipisci cupiditate velit nobis?</p>
+    <p>Hic, consectetur? Molestiae, sed pariatur.</p>
+    <p>Maxime perspiciatis suscipit aperiam dolore.</p>
+    <p>Cum aspernatur adipisci maiores inventore!</p>
+    <p>Nihil, ipsum! Natus, temporibus molestias?</p>
+    <p>Eos praesentium quia fuga amet.</p>
+    <p>Quidem repellat nisi fuga saepe.</p>
+    <p>Unde asperiores rem quibusdam blanditiis.</p>
+    <p>Explicabo consequuntur mollitia blanditiis voluptatum?</p>
+    <p>Facilis repellat impedit aperiam officia?</p>
+    <p>Natus obcaecati inventore autem repellendus.</p>
+    <p>Hic expedita culpa delectus ipsa?</p>
+    <p>Enim id quibusdam ullam delectus?</p>
+    <p>Excepturi repudiandae aperiam et laborum.</p>
+    <p>Laborum quos necessitatibus consectetur repudiandae.</p>
+    <p>Quaerat illum esse accusamus velit!</p>
+    <p>Itaque et amet iure ducimus.</p>
+    <p>A obcaecati culpa molestias in?</p>
+    <p>Quo amet voluptatem dolorem sint.</p>
+    <p>Nulla dolores esse perspiciatis. Culpa?</p>
+    <p>Dolores provident cum corrupti a?</p>
+    <p>Ab, dolore quidem! Rerum, maxime.</p>
+    <p>Cupiditate officiis quibusdam maxime quia.</p>
+    <p>Veniam vel modi hic ducimus.</p>
+    <p>Inventore laboriosam sint doloribus temporibus.</p>
+    <p>Fugiat magnam ipsa laudantium facere.</p>
+    <p>Ipsa dolores fugiat obcaecati dolor!</p>
+    <p>Vel voluptatibus architecto exercitationem labore.</p>
+    <p>Earum minus dolorum illo adipisci?</p>
+    <p>Sit repellat distinctio consequatur optio!</p>
+    <p>Iste, ipsam! Placeat, excepturi nobis.</p>
+    <p>Id similique dolores sint aliquid!</p>
+    <p>Fugit quibusdam tempora aperiam ab.</p>
+    <p>Iure at maxime blanditiis amet!</p>
+    <p>Illum reiciendis blanditiis nesciunt cumque!</p>
+    <p>Asperiores doloremque quam deleniti maxime.</p>
+    <p>Quam ex aperiam sequi minima.</p>
+    <p>Quidem esse earum nemo magnam.</p>
+    <p>Culpa ut eius tempore ducimus!</p>
+    <p>Reiciendis labore commodi omnis maiores!</p>
+    <p>Velit ipsa quod ea non?</p>
+    <p>Aliquid beatae hic corrupti sit.</p>
+    <p>Iste iusto eum amet perspiciatis?</p>
+    <p>Laborum harum id doloribus animi!</p>
+    <p>Exercitationem ipsa sapiente sit quisquam?</p>
+    <p>Exercitationem autem quis ratione nemo.</p>
+    <p>Omnis excepturi tempora recusandae aut!</p>
+    <p>Totam sunt quia odit alias?</p>
+    <p>Totam eius rerum quidem velit?</p>
+    <p>Laboriosam hic consequuntur maiores illum!</p>
+    <p>Consequatur magnam voluptatem autem aliquam!</p>
+    <p>Tempora, repellendus adipisci. Facere, nemo.</p>
+    <p>Facere non obcaecati ipsa optio!</p>
+    <p>Harum quas eius autem maxime?</p>
+    <p>Odit ducimus hic esse eligendi.</p>
+    <p>Minima facilis rem distinctio. Necessitatibus?</p>
+    <p>Et tempora vel labore ullam.</p>
+    <p>Assumenda quibusdam nisi natus doloremque?</p>
+    <p>Inventore repudiandae quidem quas at!</p>
+    <p>Iusto perferendis consequatur excepturi nam.</p>
+    <p>Tempora quam magni dolorum voluptatum!</p>
+    <p>Velit officiis est atque nostrum.</p>
+    <p>Tenetur deserunt autem odit quis!</p>
+    <p>Aliquam praesentium dolorem eum autem!</p>
+    <p>Impedit quis pariatur officia. Vel!</p>
+    <p>Sed optio facilis minus ipsum.</p>
+    <p>Voluptatibus provident dolore laudantium aliquid.</p>
+    <p>Tempore quibusdam voluptates eaque recusandae!</p>
+    <p>Veritatis facilis nulla tempore cupiditate.</p>
+    <p>Temporibus accusamus corrupti sunt ullam!</p>
+    <p>Et optio quo quaerat ad.</p>
+    <p>Voluptatum perferendis aut eveniet quam.</p>
+    <p>Aliquam ullam eveniet blanditiis cupiditate.</p>
+    <p>Quisquam aut praesentium nam. Accusantium.</p>
+    <p>Cumque hic porro assumenda earum.</p>
+    <p>Expedita cum aliquid unde accusantium?</p>
+    <p>Officia praesentium quo sit voluptatibus.</p>
+    <p>Molestias saepe dolore rem. Aut.</p>
+    <p>Doloribus repellat saepe dignissimos assumenda?</p>
+    <p>Amet quos qui quibusdam velit!</p>
+    <p>Voluptatem temporibus voluptatum pariatur distinctio.</p>
+    <p>Iure quia sed quam. Nihil!</p>
+    <p>Excepturi, corporis. Ipsa, ipsam non.</p>
+    <p>Impedit libero molestiae dignissimos eveniet!</p>
+    <p>Est exercitationem cumque necessitatibus eos.</p>
+    <p>Consequuntur voluptatibus laboriosam suscipit molestias.</p>
+    <p>Nam praesentium quia quidem non?</p>
+    <p>Porro, eaque eum. Reprehenderit, dolorem?</p>
+    <p>Quae reprehenderit culpa id deserunt?</p>
+    <p>Expedita fugit ab unde dolorum!</p>
+    <p>Minima voluptate deserunt vitae repellendus?</p>
+    <p>Totam, dolore. Ratione, quas nesciunt!</p>
+    <p>Saepe iure ex ratione sit.</p>
+    <p>Dolorum excepturi maiores alias veritatis.</p>
+    <p>Quibusdam maxime sint consequuntur ipsum.</p>
+    <p>Accusantium animi soluta veritatis provident?</p>
+    <p>Quia laudantium fugiat sed libero!</p>
   </div>
-
-
-
-
   <!-- Bootstrap Js -->
   <script src="js/bootstrap.bundle.min.js"></script>
   <!-- Font Awesome Js -->
   <script src="js/all.min.js"></script>
+  <!-- Main Js -->
+  <script src="js/main.js"></script>
 </body>
 
 </html>

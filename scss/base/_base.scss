@@ -1,0 +1,40 @@
+@use "../abstracts/variables"as *;
+@use "../abstracts/mixins"as *;
+
+/* Font For Body */
+body {
+  font-family: 'Open Sans', sans-serif;
+  overflow: visible !important;
+  padding-right: 0 !important;
+}
+
+/* Font Weight SemiBold Class */
+.fw-smb {
+  font-weight: $font-weight-semibold;
+}
+
+
+/* Center With Display Flex */
+.center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Center With Position Absolute */
+.center-position-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.shadow-card {
+  box: {
+    shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+}
+
+/* Using Mixin */
+@include generator-background-color;
+@include generator-text-color;

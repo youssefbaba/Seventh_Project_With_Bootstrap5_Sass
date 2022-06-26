@@ -1,0 +1,620 @@
+@use "../abstracts/variables"as *;
+@use "../vendors/bootstrap"as *;
+@use "../base/base";
+@use "../../node_modules/sass-rem/rem"as *;
+@use "sass:math"as *;
+
+/* Start The Services Section */
+.services {
+  padding: {
+    top: rem(80px);
+  }
+
+  @include media-breakpoint-up(md) {
+    padding: {
+      top: rem(96px);
+      bottom: rem(96px) !important;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: {
+      top: rem(144px);
+      bottom: rem(144px) !important;
+    }
+  }
+
+  .head-section {
+    &-description {
+      @include media-breakpoint-up(lg) {
+        margin: {
+          bottom: rem(64px);
+        }
+      }
+    }
+  }
+
+  .list {
+    .check {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    p {
+      font: {
+        size: rem(14px);
+      }
+
+      line: {
+        height: div(1.25rem, rem(14px));
+      }
+
+      @include media-breakpoint-up(md) {
+        font: {
+          size: 1.125rem;
+        }
+
+        line: {
+          height: div(rem(25px), 1.125rem);
+        }
+      }
+    }
+  }
+
+  .services-content {
+    @include media-breakpoint-up(lg) {
+      margin: {
+        top: rem(64px) !important;
+      }
+    }
+
+    &-item {
+      @include media-breakpoint-up(lg) {
+        padding: {
+          left: rem(15px);
+          right: rem(15px);
+        }
+      }
+
+      .card {
+        border: {
+          color: $whisper-blue;
+        }
+
+        @include media-breakpoint-up(md) {
+          padding: {
+            right: rem(18px) !important;
+          }
+        }
+
+        &-body {
+          gap: rem(27px 0);
+
+          @include media-breakpoint-up(md) {
+            gap: rem(0 30px);
+          }
+
+          @include media-breakpoint-up(lg) {
+            gap: rem(34px 0);
+          }
+
+          .icon {
+            width: rem(56px);
+            height: rem(56px);
+
+            @include media-breakpoint-up(md) {
+              width: rem(64px);
+              height: rem(64px);
+
+            }
+
+            border: {
+              color: rgba($primary, 0.2) !important;
+            }
+
+            img {
+              @include media-breakpoint-up(md) {
+                width: 2.5rem;
+                height: 2.5rem;
+              }
+
+              @include media-breakpoint-up(lg) {
+                border: 1px dashed $secondary;
+              }
+            }
+          }
+
+          div {
+            &:nth-child(2) {
+              flex: 1;
+
+              .title {
+                font: {
+                  family: "HKGrotesk-Bold", sans-serif;
+                  size: 1.25rem;
+                }
+
+                line: {
+                  height: div(1.5rem, 1.25rem);
+                }
+
+                letter: {
+                  spacing: 0.2px;
+                }
+
+                @include media-breakpoint-up(md) {
+                  font: {
+                    size: 1.5rem;
+                  }
+
+                  line: {
+                    height: div(2rem, 1.5rem);
+                  }
+                }
+              }
+
+              .info {
+                line: {
+                  height: 1.75;
+                }
+
+                margin: {
+                  top: rem(11px);
+                }
+
+                @include media-breakpoint-up(md) {
+                  font: {
+                    size: 1.125rem;
+                  }
+
+                  line: {
+                    height: div(2rem, 1.125rem);
+                  }
+
+                  margin: {
+                    top: rem(10px);
+                  }
+                }
+              }
+
+              .link {
+                line: {
+                  height: div(rem(22px), 1rem);
+                }
+
+                @include media-breakpoint-up(md) {
+                  font: {
+                    size: 1.125rem;
+                  }
+
+                  line: {
+                    height: div(rem(25px), 1.125rem);
+                  }
+                }
+
+                &:hover {
+                  span {
+                    text: {
+                      decoration: underline;
+                    }
+                  }
+                }
+
+                svg {
+                  top: 2px;
+
+                  @include media-breakpoint-up(md) {
+                    top: 0.5px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* End The Services Section */
+/* Start The Quote Section */
+.quote {
+  background: {
+    image: url("../media/imgs/quote/quote_01.svg");
+    repeat: no-repeat;
+    position: top center;
+    size: cover;
+  }
+
+  @include media-breakpoint-up(lg) {
+    background: {
+      image: url("../media/imgs/quote/quote_02.png");
+    }
+  }
+
+  .container {
+    z-index: 2;
+
+    .card {
+      @include media-breakpoint-up(xxl) {
+        margin: {
+          bottom: rem(50px);
+        }
+      }
+
+      &-body {
+        @include media-breakpoint-up(md) {
+          padding: {
+            top: rem(62px) !important;
+            right: rem(64px) !important;
+            bottom: rem(59px) !important;
+            left: rem(64px) !important;
+          }
+        }
+
+        .quote-left {
+          @include media-breakpoint-up(md) {
+            width: 2.5rem;
+            height: rem(46px);
+          }
+        }
+
+        .quote-text {
+          font: {
+            family: "HKGrotesk-Regular", sans-serif;
+            size: 1.25rem;
+          }
+
+          line: {
+            height: div(2.25rem, 1.25rem);
+          }
+
+          letter: {
+            spacing: 0.1px;
+          }
+
+          margin: {
+            top: rem(19px);
+          }
+
+          @include media-breakpoint-up(md) {
+            font: {
+              size: 2rem;
+            }
+
+            line: {
+              height: div(rem(52px), 2rem);
+            }
+
+            letter: {
+              spacing: 0.2px;
+            }
+          }
+        }
+
+        .name-customer {
+          line: {
+            height: div(rem(22px), 1rem);
+          }
+
+          @include media-breakpoint-up(md) {
+            font: {
+              size: 1.25rem;
+            }
+
+            line: {
+              height: div(1.75rem, 1.25rem);
+            }
+          }
+        }
+
+        .type-customer {
+          font: {
+            style: italic;
+          }
+
+          line: {
+            height: div(rem(22px), 1rem);
+          }
+
+          @include media-breakpoint-down(md) {
+            font: {
+              size: rem(14px);
+            }
+
+            line: {
+              height: div(rem(19px), rem(14px));
+            }
+          }
+
+          .check {
+            width: 1.25rem;
+            height: 1.25rem;
+          }
+        }
+      }
+    }
+
+  }
+
+  .wave,
+  .curve {
+    line-height: 0;
+  }
+
+  .wave {
+    bottom: -20px;
+  }
+
+  .wave {
+    svg {
+      width: calc(275% + 1.3px);
+      height: 101px;
+    }
+  }
+
+  .curve {
+    svg {
+      width: calc(300% + 1.3px);
+      height: 100px;
+    }
+  }
+
+  .wave,
+  .curve {
+    .shape-fill {
+      fill: #fff;
+    }
+  }
+}
+
+/* End The Quote Section */
+/* Start The Benefits Section */
+.benefits {
+  padding: {
+    top: rem(64px);
+    bottom: rem(56px);
+  }
+
+  @include media-breakpoint-up(md) {
+    padding: {
+      top: rem(94px);
+      bottom: rem(97px);
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: {
+      top: rem(159px);
+      bottom: rem(251px);
+    }
+  }
+
+  .row {
+    .head-section {
+      @include media-breakpoint-up(md) {
+        margin: {
+          bottom: rem(64px) !important;
+        }
+      }
+    }
+
+    .card {
+      &-body {
+        .icon {
+          width: rem(48px);
+          height: rem(48px);
+
+          border: {
+            color: rgba($primary, 0.2) !important;
+          }
+
+          img {
+            @include media-breakpoint-up(lg) {
+              border: 1px dashed $secondary;
+            }
+          }
+        }
+
+        .title {
+          font: {
+            family: "HKGrotesk-SemiBold", sans-serif;
+            size: 1.25rem;
+          }
+
+          line: {
+            height: div(1.5rem, 1.25rem);
+          }
+
+          letter: {
+            spacing: 0.2px;
+          }
+
+          @include media-breakpoint-up(md) {
+            font: {
+              size: rem(22px);
+            }
+
+            line: {
+              height: div(2rem, rem(22px));
+            }
+          }
+        }
+
+        .info {
+          line: {
+            height: 1.75;
+          }
+
+          @include media-breakpoint-up(md) {
+            font: {
+              size: 1.125rem;
+            }
+
+            line: {
+              height: div(2rem, 1.125rem);
+            }
+          }
+        }
+      }
+    }
+
+    .benefits-item {
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        @include media-breakpoint-up(lg) {
+          margin: {
+            bottom: rem(64px) !important;
+          }
+        }
+      }
+    }
+
+    .benefits-item,
+    .head-section {
+      @include media-breakpoint-up(md) {
+        padding: {
+          left: rem(15px);
+          right: rem(15px);
+        }
+      }
+
+      @include media-breakpoint-up(lg) {
+        padding: {
+          left: 1.5rem;
+          right: 1.5rem;
+        }
+      }
+    }
+
+    .line {
+      height: 1px;
+
+      background: {
+        color: $whisper-blue;
+      }
+
+      margin: {
+        top: rem(56px);
+      }
+
+      @include media-breakpoint-up(md) {
+        margin: {
+          top: rem(96px);
+        }
+      }
+
+      @include media-breakpoint-up(lg) {
+        margin: {
+          top: rem(144px);
+        }
+      }
+    }
+  }
+}
+
+/* End The Benefits Section */
+/* Start The Tips Section */
+.tips {
+  .head-section {
+    @include media-breakpoint-up(md) {
+      margin: {
+        bottom: rem(56px) !important;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin: {
+        bottom: rem(64px) !important;
+      }
+    }
+  }
+
+  .card {
+    @include media-breakpoint-up(md) {
+      padding: {
+        left: rem(13.5px);
+        right: rem(13.5px);
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding: {
+        left: rem(15px);
+        right: rem(15px);
+      }
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(180deg, rgba(24, 59, 86, 0.0001) 0%, rgba(22, 49, 70, 0.453847) 45.38%, #152532 100%);
+
+      border: {
+        radius: 1rem;
+      }
+
+      @include media-breakpoint-up(md) {
+        left: rem(13.5px);
+        right: rem(13.5px);
+      }
+
+      @include media-breakpoint-up(lg) {
+        left: rem(15px);
+        right: rem(15px);
+      }
+    }
+
+    .card-text {
+      font: {
+        family: "HKGrotesk-Bold", sans-serif;
+        size: 1.25rem;
+      }
+
+      line: {
+        height: div(1.5rem, 1.25rem);
+      }
+
+      letter: {
+        spacing: 0.2px;
+      }
+
+      @include media-breakpoint-up(md) {
+        font: {
+          size: 1.5rem;
+        }
+
+        line: {
+          height: div(2rem, 1.5rem);
+        }
+      }
+
+      @include media-breakpoint-up(lg) {
+        font: {
+          size: 2.25rem;
+        }
+      }
+
+      left: 1.5rem;
+      right: 1.5rem;
+      bottom: rem(50px);
+      z-index: 2;
+
+      @include media-breakpoint-up(md) {
+        bottom: rem(66px);
+      }
+
+      @include media-breakpoint-up(lg) {
+        left: 3rem;
+        right: 3rem;
+      }
+    }
+  }
+}
+
+/* End The Tips Section */
