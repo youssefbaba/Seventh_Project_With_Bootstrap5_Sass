@@ -66,6 +66,11 @@
       margin: {
         top: rem(64px) !important;
       }
+
+      margin: {
+        left: rem(-15px);
+        right: rem(-15px);
+      }
     }
 
     &-item {
@@ -81,16 +86,14 @@
           color: $whisper-blue;
         }
 
-        @include media-breakpoint-up(md) {
-          padding: {
-            right: rem(18px) !important;
-          }
-        }
-
         &-body {
           gap: rem(27px 0);
 
           @include media-breakpoint-up(md) {
+            padding: {
+              right: rem(18px) !important;
+            }
+
             gap: rem(0 30px);
           }
 
@@ -334,19 +337,20 @@
         }
       }
     }
-
   }
 
   .wave,
   .curve {
     line-height: 0;
+
+    .shape-fill {
+      fill: #fff;
+    }
   }
 
   .wave {
     bottom: -20px;
-  }
 
-  .wave {
     svg {
       width: calc(275% + 1.3px);
       height: 101px;
@@ -357,13 +361,6 @@
     svg {
       width: calc(300% + 1.3px);
       height: 100px;
-    }
-  }
-
-  .wave,
-  .curve {
-    .shape-fill {
-      fill: #fff;
     }
   }
 }
@@ -391,10 +388,30 @@
   }
 
   .row {
+    @include media-breakpoint-up(md) {
+      margin: {
+        left: rem(-15px);
+        right: rem(-15px);
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin: {
+        left: -1.5rem;
+        right: -1.5rem;
+      }
+    }
+
     .head-section {
       @include media-breakpoint-up(md) {
         margin: {
           bottom: rem(64px) !important;
+        }
+      }
+
+      @include media-breakpoint-up(lg) {
+        margin: {
+          bottom: 0 !important;
         }
       }
     }
@@ -531,90 +548,455 @@
     }
   }
 
-  .card {
+  .row {
     @include media-breakpoint-up(md) {
-      padding: {
-        left: rem(13.5px);
-        right: rem(13.5px);
+      margin: {
+        left: rem(-13.5px);
+        right: rem(-13.5px);
       }
     }
 
     @include media-breakpoint-up(lg) {
-      padding: {
-        left: rem(15px);
-        right: rem(15px);
+      margin: {
+        left: rem(-15px);
+        right: rem(-15px);
       }
     }
 
-    &:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: linear-gradient(180deg, rgba(24, 59, 86, 0.0001) 0%, rgba(22, 49, 70, 0.453847) 45.38%, #152532 100%);
-
-      border: {
-        radius: 1rem;
-      }
-
+    .card {
       @include media-breakpoint-up(md) {
-        left: rem(13.5px);
-        right: rem(13.5px);
+        padding: {
+          left: rem(13.5px);
+          right: rem(13.5px);
+        }
       }
 
       @include media-breakpoint-up(lg) {
-        left: rem(15px);
-        right: rem(15px);
-      }
-    }
-
-    .card-text {
-      font: {
-        family: "HKGrotesk-Bold", sans-serif;
-        size: 1.25rem;
+        padding: {
+          left: rem(15px);
+          right: rem(15px);
+        }
       }
 
-      line: {
-        height: div(1.5rem, 1.25rem);
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(180deg, rgba(24, 59, 86, 0.0001) 0%, rgba(22, 49, 70, 0.453847) 45.38%, #152532 100%);
+
+        border: {
+          radius: 1rem;
+        }
+
+        @include media-breakpoint-up(md) {
+          left: rem(13.5px);
+          right: rem(13.5px);
+        }
+
+        @include media-breakpoint-up(lg) {
+          left: rem(15px);
+          right: rem(15px);
+        }
       }
 
-      letter: {
-        spacing: 0.2px;
-      }
-
-      @include media-breakpoint-up(md) {
+      .card-text {
         font: {
-          size: 1.5rem;
+          family: "HKGrotesk-Bold", sans-serif;
+          size: 1.25rem;
         }
 
         line: {
-          height: div(2rem, 1.5rem);
+          height: div(1.5rem, 1.25rem);
         }
-      }
 
-      @include media-breakpoint-up(lg) {
-        font: {
-          size: 2.25rem;
+        letter: {
+          spacing: 0.2px;
         }
-      }
 
-      left: 1.5rem;
-      right: 1.5rem;
-      bottom: rem(50px);
-      z-index: 2;
+        @include media-breakpoint-up(md) {
+          font: {
+            size: 1.5rem;
+          }
 
-      @include media-breakpoint-up(md) {
-        bottom: rem(66px);
-      }
+          line: {
+            height: div(2rem, 1.5rem);
+          }
+        }
 
-      @include media-breakpoint-up(lg) {
-        left: 3rem;
-        right: 3rem;
+        @include media-breakpoint-up(lg) {
+          font: {
+            size: 2.25rem;
+          }
+        }
+
+        left: 1.5rem;
+        right: 1.5rem;
+        bottom: rem(50px);
+        z-index: 2;
+
+        @include media-breakpoint-up(md) {
+          bottom: rem(66px);
+        }
+
+        @include media-breakpoint-up(lg) {
+          left: 3rem;
+          right: 3rem;
+        }
       }
     }
   }
 }
 
 /* End The Tips Section */
+/* Start The Testimonials Section */
+.testimonials {
+  padding: {
+    top: rem(80px);
+  }
+
+  @include media-breakpoint-up(md) {
+    padding: {
+      top: rem(120px);
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    padding: {
+      top: rem(37px);
+    }
+  }
+
+  .head-section {
+    @include media-breakpoint-up(md) {
+      margin: {
+        bottom: rem(62px) !important;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin: {
+        bottom: rem(64px) !important;
+      }
+    }
+  }
+
+  .container {
+    .row {
+      @include media-breakpoint-up(md) {
+        margin: {
+          left: rem(-15px);
+          right: rem(-15px);
+        }
+      }
+
+      .testimonials-item {
+        @include media-breakpoint-up(md) {
+          padding: {
+            left: rem(15px);
+            right: rem(15px);
+          }
+        }
+
+        &:first-child,
+        &:nth-child(2) {
+          @include media-breakpoint-up(md) {
+            margin: {
+              bottom: rem(56px) !important;
+            }
+          }
+
+          @include media-breakpoint-up(lg) {
+            margin: {
+              bottom: 0 !important;
+            }
+          }
+        }
+
+        .text-desc {
+          line: {
+            height: 1.75;
+          }
+
+          @include media-breakpoint-up(md) {
+            font: {
+              size: 1.125rem;
+            }
+
+            line: {
+              height: div(2rem, 1.125rem);
+            }
+          }
+        }
+
+        .name {
+          line: {
+            height: div(rem(22px), 1rem);
+          }
+        }
+
+        .type {
+          font: {
+            size: rem(14px);
+            style: italic;
+          }
+
+          line: {
+            height: div(rem(19px), rem(14px));
+          }
+
+          .check {
+            width: 1rem;
+            height: 1rem;
+          }
+        }
+
+        .parent {
+          gap: 0 0.75rem;
+
+          @include media-breakpoint-up(lg) {
+            gap: 0 1.25rem;
+          }
+        }
+      }
+
+      .image-circle {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+  }
+
+}
+
+/* End The Testimonials Section */
+/* Start The Information Section */
+.information {
+  padding: {
+    top: rem(96px);
+    bottom: rem(124px);
+  }
+
+  @include media-breakpoint-up(md) {
+    padding: {
+      bottom: rem(204px);
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: {
+      top: rem(144px);
+      bottom: rem(361px);
+    }
+  }
+
+  .row {
+    @include media-breakpoint-up(md) {
+      margin: {
+        left: rem(-18px);
+        right: rem(-18px);
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin: {
+        left: rem(-15px);
+        right: rem(-15px);
+      }
+    }
+
+    .image-circle {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    p {
+      line: {
+        height: div(rem(22px), 1rem);
+      }
+    }
+
+    .support-team-item,
+    .raiting-stars-item,
+    .like-item {
+      .card {
+        &-body {
+          padding: {
+            left: rem(45px);
+            right: rem(45px);
+          }
+
+          @include media-breakpoint-between(md, lg) {
+            padding: {
+              left: 0;
+              right: 0;
+            }
+          }
+        }
+      }
+
+      @include media-breakpoint-up(md) {
+        padding: {
+          left: rem(18px);
+          right: rem(18px);
+        }
+      }
+
+      @include media-breakpoint-up(lg) {
+        padding: {
+          left: rem(15px);
+          right: rem(15px);
+        }
+      }
+    }
+
+    .support-team-item {
+      .card {
+        &-body {
+          padding: {
+            top: rem(23px);
+            bottom: 0;
+          }
+
+          .list-image {
+            li {
+              &:nth-child(1) {
+                z-index: 3;
+              }
+
+              &:nth-child(2) {
+                z-index: 2;
+                left: -6px;
+                transform: translateY(-11px);
+              }
+
+              &:nth-child(3) {
+                z-index: 1;
+                left: -12px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .raiting-stars-item {
+      @include media-breakpoint-up(md) {
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%) rotate(30deg);
+
+          background: {
+            color: $whisper-blue;
+          }
+
+          width: 2px;
+          height: 2.5rem;
+        }
+
+        &::before {
+          left: 0;
+        }
+
+        &::after {
+          right: 0;
+        }
+      }
+
+      .card {
+        &-body {
+          padding: {
+            top: rem(25px);
+            bottom: rem(26px);
+          }
+        }
+      }
+    }
+
+    .like-item {
+      @include media-breakpoint-up(lg) {
+        margin: {
+          right: calc(calc(1 / 12) * 100%);
+        }
+      }
+
+      .card {
+        &-body {
+          padding: {
+            top: rem(16px);
+            bottom: 0;
+          }
+        }
+      }
+
+      .image {
+        @include media-breakpoint-up(lg) {
+          width: rem(44px);
+          height: rem(44px);
+          border: 1px dashed $secondary;
+        }
+
+        .icon {
+          @include media-breakpoint-down(lg) {
+            width: rem(44px);
+            height: rem(44px);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* End The Information Section */
+/* Start The Contact Section */
+.contact {
+  @include media-breakpoint-up(md) {
+    padding: {
+      bottom: rem(63px) !important;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: {
+      bottom: rem(159px) !important;
+    }
+  }
+
+  .wave-two {
+    top: -104px;
+    line-height: 0;
+
+    @include media-breakpoint-up(md) {
+      top: -140px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      top: -190px;
+    }
+
+    svg {
+      width: calc(272% + 1.3px);
+      height: 104px;
+
+      @include media-breakpoint-up(md) {
+        height: 140px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        height: 190px;
+      }
+    }
+
+    .shape-fill {
+      fill: $fog-of-war;
+    }
+  }
+}
+
+/* End The Contact Section */

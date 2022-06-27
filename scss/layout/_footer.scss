@@ -1,0 +1,163 @@
+@use "../vendors/bootstrap"as *;
+@use "../../node_modules/sass-rem/rem"as *;
+@use "sass:math"as *;
+
+/* Start The Footer Layout */
+.footer {
+  padding: {
+    bottom: rem(78px);
+  }
+
+  @include media-breakpoint-up(md) {
+    padding: {
+      top: rem(63px) !important;
+      bottom: rem(78px);
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: {
+      top: rem(128px) !important;
+      bottom: rem(82px);
+    }
+  }
+
+  .row {
+    &:first-child {
+      @include media-breakpoint-up(md) {
+        margin: {
+          left: rem(-15px);
+          right: rem(-15px);
+        }
+      }
+
+      .item {
+        @include media-breakpoint-up(md) {
+          padding: {
+            left: rem(15px);
+            right: rem(15px);
+          }
+        }
+
+        &:not(:first-of-type) {
+          a {
+            &:hover {
+              text: {
+                decoration: underline !important;
+              }
+            }
+          }
+        }
+
+        &:nth-of-type(2),
+        &:nth-of-type(3) {
+          @include media-breakpoint-down(md) {
+            margin: {
+              bottom: rem(39px);
+            }
+          }
+        }
+
+        .title {
+          font: {
+            size: $font-size-base;
+          }
+
+          line: {
+            height: div(rem(22px), 1rem);
+          }
+
+          @include media-breakpoint-up(md) {
+            font: {
+              size: 1.125rem;
+            }
+
+            line: {
+              height: div(rem(25px), 1.125rem);
+            }
+
+            margin: {
+              bottom: rem(31px) !important;
+            }
+          }
+        }
+
+        &.intro {
+          @include media-breakpoint-down(md) {
+            margin: {
+              top: rem(47px);
+              bottom: rem(47px);
+            }
+          }
+
+          p {
+            line: {
+              height: div(rem(28px), 1rem);
+            }
+
+            @include media-breakpoint-down(md) {
+              font: {
+                size: rem(14px);
+              }
+
+              line: {
+                height: div(rem(24px), rem(14px));
+              }
+            }
+          }
+
+          .list-media {
+            a {
+              width: 2.5rem;
+              height: 2.5rem;
+              background-color: rgba($secondary, 0.2);
+            }
+          }
+        }
+      }
+    }
+
+    &:last-child {
+      .item {
+        @include media-breakpoint-up(md) {
+          margin: {
+            top: rem(62px);
+          }
+        }
+
+        @include media-breakpoint-up(lg) {
+          margin: {
+            top: rem(96px);
+          }
+        }
+
+        .heart {
+          width: rem(56px);
+          height: rem(56px);
+        }
+      }
+    }
+  }
+
+  .item {
+
+    a,
+    .copyright {
+      line: {
+        height: div(rem(22px), 1rem);
+      }
+
+      @include media-breakpoint-down(md) {
+        font: {
+          size: rem(14px);
+        }
+
+        line: {
+          height: div(1.25rem, rem(14px));
+        }
+      }
+    }
+  }
+}
+
+/* End The Footer Layout */
