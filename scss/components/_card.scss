@@ -1,0 +1,25 @@
+@use "../abstracts/variables"as *;
+@use "../vendors/bootstrap"as *;
+@use "../../node_modules/sass-rem/rem"as *;
+
+/* Start The Card Component */
+.card {
+  &-body {
+    .icon {
+      width: rem(48px);
+      height: rem(48px);
+
+      border: {
+        color: rgba($primary, 0.2) !important;
+      }
+
+      img {
+        @include media-breakpoint-up(lg) {
+          border: 1px dashed $secondary;
+        }
+      }
+    }
+  }
+}
+
+/* End The Card Component */

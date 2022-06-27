@@ -14,7 +14,7 @@
         }
 
         letter: {
-          spacing: 0.2px;
+          spacing: $letter-space;
         }
 
         @include media-breakpoint-up(md) {

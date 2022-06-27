@@ -1,3 +1,4 @@
+@use "../abstracts/variables"as *;
 @use "../vendors/bootstrap"as *;
 @use "../../node_modules/sass-rem/rem"as *;
 @use "sass:math"as *;
@@ -115,7 +116,7 @@
             }
 
             letter: {
-              spacing: 0.2px;
+              spacing: $letter-space;
             }
           }
 

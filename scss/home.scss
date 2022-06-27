@@ -1,6 +1,7 @@
 @charset "UTF-8";
 // 1. Configuration and abstracts
 @use "abstracts/variables";
+@use "abstracts/mixins";
 
 
 // 2. Vendors
@@ -21,6 +22,7 @@
 // 5. Components
 @use "components/button";
 @use "components/head-section";
+@use "components/card";
 
 
 // 6. Page-specific styles
