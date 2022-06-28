@@ -19,6 +19,47 @@
         }
       }
     }
+
+    .title {
+      font: {
+        family: "HKGrotesk-Bold", sans-serif;
+        size: 1.25rem;
+      }
+
+      line: {
+        height: div(1.5rem, 1.25rem);
+      }
+
+      letter: {
+        spacing: $letter-space;
+      }
+
+      @include media-breakpoint-up(md) {
+        font: {
+          size: rem(22px);
+        }
+
+        line: {
+          height: div(2rem, rem(22px));
+        }
+      }
+    }
+
+    .info {
+      line: {
+        height: 1.75;
+      }
+
+      @include media-breakpoint-up(md) {
+        font: {
+          size: 1.125rem;
+        }
+
+        line: {
+          height: div(2rem, 1.125rem);
+        }
+      }
+    }
   }
 }
 

@@ -15166,6 +15166,27 @@ body {
     border: 1px dashed #5A7184;
   }
 }
+.card-body .title {
+  font-family: "HKGrotesk-Bold", sans-serif;
+  font-size: 1.25rem;
+  line-height: div(1.5rem, 1.25rem);
+  letter-spacing: 0.2px;
+}
+@media (min-width: 768px) {
+  .card-body .title {
+    font-size: 1.375rem;
+    line-height: div(2rem, 1.375rem);
+  }
+}
+.card-body .info {
+  line-height: 1.75;
+}
+@media (min-width: 768px) {
+  .card-body .info {
+    font-size: 1.125rem;
+    line-height: div(2rem, 1.125rem);
+  }
+}
 
 /* End The Card Component */
 /* Start The Services Section */
@@ -15252,12 +15273,6 @@ body {
 .services .services-content-item .card-body div:nth-child(2) {
   flex: 1;
 }
-.services .services-content-item .card-body div:nth-child(2) .title {
-  font-family: "HKGrotesk-Bold", sans-serif;
-  font-size: 1.25rem;
-  line-height: 1.2;
-  letter-spacing: 0.2px;
-}
 @media (min-width: 768px) {
   .services .services-content-item .card-body div:nth-child(2) .title {
     font-size: 1.5rem;
@@ -15265,13 +15280,10 @@ body {
   }
 }
 .services .services-content-item .card-body div:nth-child(2) .info {
-  line-height: 1.75;
   margin-top: 0.6875rem;
 }
 @media (min-width: 768px) {
   .services .services-content-item .card-body div:nth-child(2) .info {
-    font-size: 1.125rem;
-    line-height: 1.7777777778;
     margin-top: 0.625rem;
   }
 }
@@ -15430,24 +15442,6 @@ body {
 }
 .benefits .row .card-body .title {
   font-family: "HKGrotesk-SemiBold", sans-serif;
-  font-size: 1.25rem;
-  line-height: 1.2;
-  letter-spacing: 0.2px;
-}
-@media (min-width: 768px) {
-  .benefits .row .card-body .title {
-    font-size: 1.375rem;
-    line-height: 1.4545454545;
-  }
-}
-.benefits .row .card-body .info {
-  line-height: 1.75;
-}
-@media (min-width: 768px) {
-  .benefits .row .card-body .info {
-    font-size: 1.125rem;
-    line-height: 1.7777777778;
-  }
 }
 @media (min-width: 992px) {
   .benefits .row .benefits-item:nth-child(2), .benefits .row .benefits-item:nth-child(3) {
@@ -15833,26 +15827,11 @@ body {
   }
 }
 .contact .row .first-column .card-body .title-info .title {
-  font-family: "HKGrotesk-Bold", sans-serif;
-  font-size: 1.25rem;
-  line-height: 1.2;
-  letter-spacing: 0.2px;
   margin-bottom: 0.6875rem;
 }
 @media (min-width: 768px) {
   .contact .row .first-column .card-body .title-info .title {
     font-family: "HKGrotesk-SemiBold", sans-serif;
-    font-size: 1.375rem;
-    line-height: 1.4545454545;
-  }
-}
-.contact .row .first-column .card-body .title-info .info {
-  line-height: 1.75;
-}
-@media (min-width: 768px) {
-  .contact .row .first-column .card-body .title-info .info {
-    font-size: 1.125rem;
-    line-height: 1.7777777778;
   }
 }
 .contact .row .second-column h3 {
